@@ -24,7 +24,8 @@
         <th>Name</th>
         <th>Rating</th>
         <th>Comment Heading</th>
-        <th width="230">Comments</th>
+        <th width="350">Comments</th>
+        <th>Sentiment</th>
       </tr>
       {% for review in reviews %}
       <tr>
@@ -33,9 +34,28 @@
         <td>{{review['Rating']}}</td>
         <td>{{review['CommentHead']}}</td>
         <td>{{review['Comment']}}</td>
+        <td>{{review['Sentiment']}}</td>
       </tr>
       {% endfor %}
     </table>
+   
+
+    <!-- Add the following code after the closing </table> tag -->
+ 
+
+    <div class="custom-text">
+      <h2>Overall Sentiment</h2>
+      {% if sentiment == 'Positive' %}
+        <p>This product has overall Positive sentiment.</p>
+      {% elif sentiment == 'Negative' %}
+        <p>This product has overall Negative sentiment.</p>
+      {% else %}
+        <p>This product has overall Neutral sentiment.</p>
+      {% endif %}
+    </div>
+ 
+
+
   </div>
 </body>
 
