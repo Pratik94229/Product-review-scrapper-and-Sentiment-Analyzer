@@ -1,43 +1,79 @@
-# Review Scraper - Flipkart Product Reviews
+# Review Scraper
 
-This project aims to scrape product reviews from the Flipkart website. The goal is to extract valuable insights and sentiments from customer reviews about various products available on Flipkart and store extracted reviews into Mongodb.
+This project is a review scraper that fetches reviews of a product from Flipkart, performs sentiment analysis using TextBlob, and stores the results in CSV format and MongoDB.
 
-## Installation
+## Features
 
-To run the project locally, please ensure you have the following dependencies installed:
+- Fetches reviews of a product from Flipkart
+- Performs sentiment analysis using TextBlob
+- Stores the results in CSV format
+- Stores the results in MongoDB
 
-- Python 3.7 or higher
-- BeautifulSoup4
+## Prerequisites
+
+Before running the project, make sure you have the following installed:
+
 - beautifulsoup4==4.9.1
 - bs4==0.0.1
 - Flask==1.1.2
 - Flask-Cors==3.0.9
-- requests==2.24.0
 - urllib3==1.25.10
 - pymongo
+- csv
+- textblob
 
-Once you have the dependencies, follow these steps to set up the project:
+## Installation
 
-1. Clone the repository: `git clone https://github.com/your-username/review-scraper.git`
-2. Navigate to the project directory: `cd review-scraper`
-3. Create a virtual environment (optional): `python -m venv env`
-4. Activate the virtual environment (optional): `source env/bin/activate`
-5. Install the required packages: `pip install -r requirements.txt`
+1. Clone the repository:
+
+git clone https://github.com/Pratik94229/Product_review_scrapper.git
+
+
+2. Install the required dependencies:
+
+pip install -r requirements.txt
+
+
 
 ## Usage
 
-1. Run the `application.py` file and specify the product page on Flipkart that you want to scrape reviews from using the command: `python application.py`.
-2. The script will fetch the reviews from the specified product page and store them in a CSV file named `reviews.csv` in the `data` directory.
-3. Feel free to modify the script or explore other ways to analyze and visualize the scraped reviews.
+1. Run the Flask application:
 
-## Dataset
+python application.py
 
-The scraped reviews are stored in a CSV file named `reviews.csv` in the `data` directory. Each row in the CSV file represents a single review and includes information such as the reviewer's name, rating, review title, and text.
 
-## Contributing
 
-Contributions are welcome! If you find any issues or have suggestions for improvement, please open an issue or submit a pull request. Make sure to follow the project's code of conduct.
+2. Access the application in your web browser at `http://localhost:8000`.
 
-## Pending task
-- Performing sentiment analysis on reviews.
+3. Enter the product name in the search field and submit the form.
 
+4. The application will fetch reviews for the specified product, perform sentiment analysis, and store the results in a CSV file and MongoDB.
+
+## Folder Structure
+
+The project has the following folder structure:
+
+review-scraper/
+├── application.py
+├── templates/
+│ ├── index.html
+│ └── results.html
+├── static/
+│ ├── css/
+    |--main.css
+│ │ └── style.css
+│ └── js/
+│ └── script.js
+└── README.md
+
+markdown
+
+
+- `application.py`: The main Flask application file.
+- `templates/`: Directory containing HTML templates.
+- `templates/index.html`: Home page template with the search form.
+- `templates/results.html`: Results page template displaying the reviews and sentiment analysis.
+- `static/`: Directory containing static assets like CSS and JavaScript files.
+- `static/css/style.css`: CSS file for styling the HTML templates.
+- `static/js/script.js`: JavaScript file for any client-side scripting.
+- `README.md`: This README file.
