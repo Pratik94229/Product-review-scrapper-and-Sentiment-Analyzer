@@ -1,6 +1,6 @@
 # Review Scraper
 
-This project is a review scraper that fetches reviews of a product from Flipkart, performs sentiment analysis using TextBlob, and stores the results in CSV format and MongoDB.
+This project is a review scraper that fetches reviews of a product from Flipkart, performs sentiment analysis using TextBlob, and stores the results in CSV file and MongoDB.
 
 ## Features
 
